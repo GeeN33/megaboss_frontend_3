@@ -3,7 +3,7 @@ version: '3'
 services:
   client:
     build: .
-    command: bash -c "npm run build"
+    command: bash -c "npm run serve"
     volumes:
       - '.:/app'
       - '/app/node_modules'
