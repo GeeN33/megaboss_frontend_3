@@ -38,7 +38,7 @@ export default {
       if( this.login !== '' && this.password  !== '' ){
        axios({
             method: 'post',
-            url: "http://127.0.0.1:8000/api/v1/auth/token/login/",
+            url: this.$store.state.backendUrl+"auth/token/login/",
             data: {
             username: this.login,
             password: this.password

@@ -37,7 +37,7 @@ export default {
 
        axios({
         method: 'get',
-        url: 'http://127.0.0.1:8000/api/v1/set-collum',
+        url: this.$store.state.backendUrl+'set-collum',
         params: { collums: rez },
         headers: {Authorization: 'Token ' + this.getCookie("auth_token")}
          // eslint-disable-next-line no-unused-vars
@@ -57,7 +57,7 @@ export default {
 
        axios({
         method: 'get',
-        url: 'http://127.0.0.1:8000/api/v1/get-collum',
+        url: this.$store.state.backendUrl+'get-collum',
         headers: {Authorization: 'Token ' + this.getCookie("auth_token")}
       }).then(response => {
             this.collums_list = response.data

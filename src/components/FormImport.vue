@@ -147,7 +147,7 @@ export default {
         this.isOpenCircle = true
         axios({
         method: 'post',
-        url: 'http://127.0.0.1:8000/api/v1/excel-import',
+        url: this.$store.state.backendUrl+'excel-import',
         data: formData,
         headers: {'Content-Type': 'multipart/form-data', Authorization: 'Token ' + this.getCookie("auth_token")}
           }).then(response => {

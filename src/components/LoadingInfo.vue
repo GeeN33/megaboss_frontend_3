@@ -53,7 +53,7 @@ export default {
        this.isOpenthis = false
       axios({
         method: 'get',
-        url: 'http://127.0.0.1:8000/api/v1/excel-save',
+        url: this.$store.state.backendUrl+'excel-save',
         params: { save: rez },
         headers: {Authorization: 'Token ' + this.getCookie("auth_token")}
       }).then(response => {
@@ -75,7 +75,7 @@ export default {
       getcancel: function () {
          axios({
         method: 'get',
-        url: 'http://127.0.0.1:8000/api/v1/excel-save',
+        url: this.$store.state.backendUrl+'excel-save',
         params: { save: 'dell' },
         headers: {Authorization: 'Token ' + this.getCookie("auth_token")}
       }).then(response => {

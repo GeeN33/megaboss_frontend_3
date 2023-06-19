@@ -210,12 +210,9 @@ export default {
     },
 
     getlist: function () {
-      var loc = window.location
-      let hh = loc.protocol+ '//' +loc.hostname+':8000/api/v1/excel-list'
-      console.log(hh)
       axios({
         method: 'get',
-        url: hh,
+        url:   this.$store.state.backendUrl+'excel-list',
         headers: {Authorization: 'Token ' + this.getCookie("auth_token")}
       }).then(response => {
         this.excellist = response.data
